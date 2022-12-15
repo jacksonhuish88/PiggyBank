@@ -23,14 +23,15 @@ function closeExpensePopUp(){
 
     // Create new "Delete" button inside of accordion panel
     var deleteBtn = document.createElement("button");
-    deleteBtn.innerHTML = "Delete";
-    deleteBtn.style='float: right'
+    deleteBtn.innerHTML = 'Delete Category' ;
+    deleteBtn.style='float: right';
     deleteBtn.onclick = function() {
         deleteExpenseElement(this);
     };
 
     // Append the new accordion, panel, and "Delete" button to the expenses div
     var div = document.createElement('div');
+    div.id = 'accordion-parent';
     div.appendChild(btn);
     div.appendChild(panel);
     panel.appendChild(deleteBtn);
@@ -40,6 +41,13 @@ function closeExpensePopUp(){
     btn.id = new_expense_category + '_accordion'
     btn.classList.add("accordion");
     btn.innerHTML = new_expense_category;
+
+    // Add event listener to the accordion button
+    btn.addEventListener("click", function() {
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+    });
+    
 
     // Create Variable for the Expense Summary
     let summary = document.getElementById('expensesummary')
@@ -67,3 +75,8 @@ function deleteExpenseElement(element) {
     // Remove the parent element of the element
     element.parentElement.parentElement.remove();
     }
+
+function cancelExpensePopUp() {
+    let popup = document.getElementById('expensepopup');
+    open-popup.classList.remove('open-popup');
+}

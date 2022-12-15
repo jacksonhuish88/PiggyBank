@@ -216,6 +216,7 @@ th {
 label {
   display: inline-block;
   margin-bottom: 0.5rem;
+  color:black;
 }
 
 button {
@@ -351,7 +352,7 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: tautz;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -362,6 +363,7 @@ h1, .h1 {
 
 h2, .h2 {
   font-size: 2rem;
+  color: black;
 }
 
 h3, .h3 {
@@ -370,6 +372,7 @@ h3, .h3 {
 
 h4, .h4 {
   font-size: 1.5rem;
+  text-align:center;
 }
 
 h5, .h5 {
@@ -568,6 +571,11 @@ pre code {
   flex-wrap: wrap;
   margin-right: -0.75rem;
   margin-left: -0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top:1rem;
+  padding-bottom:1rem;
+  background-color:#479cf6;
 }
 
 .no-gutters {
@@ -10560,31 +10568,74 @@ div.panel.show{
 
 .popup{
   width:400px;
-  background-color: black;
-  border-radius: 6px;
+  background-color: whitesmoke;
+  border: solid black;
+  border-radius: 10px 0px 10px 10px;
   position: absolute;
   top: 50%;
   left:50%;
   transform: translate(-50%,-50%);
   text-align:center;
-  padding: 0 30px 30px;
+  padding: 25px 30px 30px;
   color: white;
   visibility: hidden;
   transition:transform 0.4s, top 0.4s;
 }
+
 .open-popup{
   visibility: visible;
 }
 
+.pop label{
+  color:black;
+}
+
 .popup button{
   width: 100%;
-  margin-top:50px;
+  margin-top:25px;
   padding:10px 0;
-  background:#007bff;
+  background-color:#007bff;
   color:white;
   border: 0;
   outline:none;
   font-size: 18px;
   border-radius: 4px;
   cursor:pointer;
+}
+
+.popup button:hover{
+  background-color: #012bff;
+  ;
+}
+
+.exitpopup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border-radius: 4px;
+}
+
+.exitpopup button {
+  padding: 0px 0px 0px 0px;
+  width: 30px;
+  margin:0px;
+  background-color: red;
+  border-radius: 0;
+  border-left: solid black;
+  border-bottom:solid black;
+  font-size: 12px;
+  position: fixed;
+  top: 0;
+  right: 0;
+
+}
+
+.exitpopup button:hover{
+  background-color: darkred;
+}
+
+.chart{
+  padding:1rem;
+  border-radius: 15px 15px 15px 15px;
+  border:solid black;
 }
