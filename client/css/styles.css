@@ -575,7 +575,6 @@ pre code {
   padding-right: 1rem;
   padding-top:1rem;
   padding-bottom:1rem;
-  background-color:#479cf6;
 }
 
 .no-gutters {
@@ -2436,13 +2435,15 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: black;
-  background-color: #9392927c;
-  border-color: #9392927c;
+  background-color: white;
+  border-color: black;
+  border-radius: 6px;
+  padding:0.25rem;
 }
 .btn-primary:hover {
-  color: black;
-  background-color: #c78b8b7c;
-  border-color: #c78b8b7c;
+  color: white;
+  background-color: #007bff;
+  border-color: #007bff;
 }
 .btn-primary:focus, .btn-primary.focus {
   color: black;
@@ -10620,14 +10621,13 @@ div.panel.show{
   width: 30px;
   margin:0px;
   background-color: red;
-  border-radius: 0;
   border-left: solid black;
   border-bottom:solid black;
   font-size: 12px;
   position: fixed;
   top: 0;
   right: 0;
-
+  border-radius: 0;
 }
 
 .exitpopup button:hover{
@@ -10638,4 +10638,14 @@ div.panel.show{
   padding:1rem;
   border-radius: 15px 15px 15px 15px;
   border:solid black;
+}
+
+.large-element {
+  overflow-x: scroll;
+}
+
+@media (max-width: 768px) {
+  .large-element {
+    overflow-x: scroll;
+  }
 }

@@ -48,7 +48,6 @@ function closeExpensePopUp(){
         this.nextElementSibling.classList.toggle("show");
     });
     
-
     // Create Variable for the Expense Summary
     let summary = document.getElementById('expensesummary')
     let new_row = document.createElement('tr')
