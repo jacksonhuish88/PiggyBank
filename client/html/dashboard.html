@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/styles.css" rel="stylesheet" />
+    <script src="../js/index.js"></script>
+    <script src="../js/Expense.js"></script>
+    <script src="../js/Income.js"></script>
+    <title>Dashboard</title>
+</head>
+<body>
+    <!-- Projects-->
+<br><br>
+<div class='container'>
+    <div class="row align-items-center">
+        <div class="container d-flex">
+            <div class="col-6 mx-auto">
+                <h4>EXPENSE SUMMARY</h4>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Expense Name</th>
+                        <th scope="col">$/Wk</th>
+                        <th scope="col">$/Month</th>
+                      </tr>
+                    </thead>
+                    <tbody id='expensesummary'>
+                        <tr>
+                            <td>Housing</td>
+                            <td>XXX</td>
+                            <td>XXX</td>
+                        </tr>
+                        <tr>
+                            <td>Food</td>
+                            <td>XXX</td>
+                            <td>XXX</td>
+                        </tr>
+                        <tr>
+                            <td>Car</td>
+                            <td>XXX</td>
+                            <td>XXX</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-9 mx-auto">
+                <h4>MAIN SUMMARY</h4>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Income</th>
+                        <th scope="col">Job Title</th>
+                        <th scope="col">$IncomeTot/Month</th>
+                        <th scope="col">$ExpenseTot/Month</th>
+                        <th scope="col">$Savings/$Debt/Month</th>
+                      </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <div class="row align-items-center">
+        <div class="container d-flex" id='accordion-parent'>
+            <div class="col-7 mx-auto">
+                <h5>EXPENSES</h5>
+<!-- HOUSING EXPENSE -->  
+                <button class="accordion" name='expense_group_fixed'>
+                  Housing
+                </button>
+                <div class="panel">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Check</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">$/Month</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Notes</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                          </tr>
+                        </thead>
+                    </table>
+                </div>
+<!-- FOOD EXPENSE -->            
+                <button class="accordion" name='expense_group_fixed'>
+                  Food
+                </button>
+                <div class="panel">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Check</th>
+                            <th scope="col">$/Month</th>
+                            <th scope="col">Notes</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                          </tr>
+                        </thead>
+                    </table>
+                </div>
+<!-- CAR EXPENSE -->  
+                <button class="accordion" name='expense_group_fixed'>
+                  Car
+                </button>
+                <div class="panel">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Check</th>
+                            <th scope="col">Make</th>
+                            <th scope="col">Model</th>
+                            <th scope="col">Year</th>
+                            <th scope="col">$/Month</th>
+                            <th scope="col">Notes</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                          </tr>
+                        </thead>
+                    </table>
+                </div>
+<!-- CLOSE APPEND NEW EXPENSES -->  
+                <div id='newexpense'></div>
+                <br>
+<!-- NEW EXPENSE BUTTON -->  
+                <button onclick="addNewExpense();" class='btn-primary' style="float: right">Add New Expense</button>
+<!-- NEW EXPENSE FORM -->        
+                <div class='popup' id='expensepopup'>
+                    <h2>New Expense Details</h2>
+                    <form action="submit">
+                        <label for="expensename">Expense Name:</label>
+                        <input type="text" id='expensename' name='expensename'>
+                        <br>
+                        <label for="monthlyamount">Amount Per Month:</label>
+                        <input type="number" id='monthlyamount' name='monthlyamount'>
+                        <button type='button' onclick='closeExpensePopUp()'>Submit</button>
+                    </form>
+                </div>
+            </div>
+<!-- INCOME COLUMN -->
+            <div class="col-7 mx-auto">
+              <h5>INCOME</h5>
+<!-- INCOME A -->  
+              <button class="accordion" style="background-color:lightgreen">
+                Source A
+              </button>
+              <div class="panel">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Check</th>
+                        <th scope="col">Job Title</th>
+                        <th scope="col">Hourly</th>
+                        <th scope="col">Hrs/Week</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
+                      </tr>
+                    </thead>
+                    <tbody id= 'expensesummary'></tbody>
+                </table>
+              </div>
+<!-- INCOME B -->  
+              <button class="accordion" style="background-color:lightgreen">
+                Source B
+              </button>
+              <div class="panel">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Check</th>
+                        <th scope="col">Job Title</th>
+                        <th scope="col">Hourly</th>
+                        <th scope="col">Hrs/Week</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
+                      </tr>
+                    </thead>
+                </table>
+              </div>
+<!-- INCOME C --> 
+            <button class="accordion" style="background-color:lightgreen">
+                Source C
+            </button>
+            <div class="panel">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Check</th>
+                        <th scope="col">Job Title</th>
+                        <th scope="col">Hourly</th>
+                        <th scope="col">Hrs/Week</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+
+<!-- NEW INCOME DIV -->              
+            <div id='newincome'></div>
+            <br>
+<!-- NEW INCOME BUTTON -->  
+            <button onclick="addNewIncome();" class='btn-primary' style="float: right">Add New Income</button>
+<!-- NEW INCOME INFO-->
+            <div class='popup' id='incomepopup'>
+                <h2>New Income Details</h2>
+                <form action="submit">
+                    <label for="incomename">Income Name:</label>
+                    <input type="text" id='incomename' name='incomename'>
+                    <br>
+                    <label for="hourlyrate">Hourly Rate:</label>
+                    <input type="number" id='hourlyrate' name='hourlyrate'>
+                    <button type='button' onclick='closeIncomePopUp()'>Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+  // Select the parent element that contains all of the accordion buttons
+  var accordionParent = document.getElementById("accordion-parent");
+
+  // Attach the event listener to the parent element
+  accordionParent.addEventListener("click", function(event) {
+  // Check if the clicked element is an accordion button
+  if (event.target.classList.contains("accordion")) {
+      // If it is, toggle the "active" and "show" classes on the clicked element and its corresponding panel
+      event.target.classList.toggle("active");
+      event.target.nextElementSibling.classList.toggle("show");
+  }
+  });
+</script>
+</body>
+</html>
