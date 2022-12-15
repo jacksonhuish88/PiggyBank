@@ -2,7 +2,7 @@
 // New Income Accordion
 function addNewIncome() {
     // Get the new expense div
-    var expenses = document.getElementById("newincome");
+    var income = document.getElementById("newincome");
     let popup = document.getElementById('incomepopup');
     // Create new accordion button
     var btn = document.createElement("button");
@@ -29,7 +29,7 @@ function addNewIncome() {
     div.appendChild(btn);
     div.appendChild(panel);
     panel.appendChild(deleteBtn);
-    expenses.appendChild(div);
+    income.appendChild(div);
 
     // Open Form
     open-popup.classList.add('open-popup');
@@ -40,8 +40,8 @@ function closeIncomePopUp(){
     open-popup.classList.remove('open-popup');
 
     let new_btn = document.getElementById('new_income')
-    let new_income_name = document.getElementById('incomename').value
-    new_btn.innerHTML = new_income_name
+    let new_income_category = document.getElementById('incomecategory').value
+    new_btn.innerHTML = new_income_category
     new_btn.id = new_income_name
 };
 
