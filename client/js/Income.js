@@ -20,7 +20,7 @@ function closeIncomePopUp(){
     // Create new accordion panel
     var panel = document.createElement("div");
     panel.classList.add("panel");
-    panel.innerHTML = '<table class="table"><thead><tr><th scope="col">Check</th><th scope="col">Job Title</th><th scope="col">Hourly</th><th scope="col">Hrs/Week</th><th scope="col">Edit</th><th scope="col">Delete</th></tr></thead></table>'
+    panel.innerHTML = '<table class="table table-responsive"><thead><tr><th scope="col">Check</th><th scope="col">Job Title</th><th scope="col">Hourly</th><th scope="col">Hrs/Week</th><th scope="col">Edit</th><th scope="col">Delete</th></tr></thead></table>'
 
     // Create new "Delete" button inside of accordion panel
     var deleteBtn = document.createElement("button");

@@ -24,34 +24,38 @@
     <div class="container-flex">
         <div class="row">
 <!-- EXPENSE SUMMARY -->
-            <div class="col-4 mx-auto chart table-responsive">
+            <div class="col-4 mx-auto">
                 <h4>EXPENSE SUMMARY</h4>
-                <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">Expense Name</th>
-                        <th scope="col">$/Wk</th>
-                        <th scope="col">$/Month</th>
-                      </tr>
-                    </thead>
-                    <tbody id='expensesummary'>
-                    </tbody>
-                </table>
+                <div class="chart table-responsive">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Expense Name</th>
+                            <th scope="col">$/Wk</th>
+                            <th scope="col">$/Month</th>
+                        </tr>
+                        </thead>
+                        <tbody id='expensesummary'>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 <!-- EXECUTIVE SUMMARY -->
-            <div class="col-5 mx-auto chart">
+            <div class="col-5 mx-auto">
                 <h4>EXECUTIVE SUMMARY</h4>
-                <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">Income</th>
-                        <th scope="col">Job Title</th>
-                        <th scope="col">$IncomeTot/Month</th>
-                        <th scope="col">$ExpenseTot/Month</th>
-                        <th scope="col">$Savings/$Debt/Month</th>
-                      </tr>
-                    </thead>
-                </table>
+                <div class="chart table-responsive">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Income</th>
+                            <th scope="col">Job Title</th>
+                            <th scope="col">$IncomeTot/Month</th>
+                            <th scope="col">$ExpenseTot/Month</th>
+                            <th scope="col">$Savings/$Debt/Month</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
@@ -60,10 +64,10 @@
 <!-- ACCORDION SECTION -->
     <div class="container-flex">
         <div class="row" >
-            <div class="col-5 mx-auto chart">
+            <div class="col-5 mx-auto">
                 <h4>Expense Categories</h4>
                 <!-- CLOSE APPEND NEW EXPENSES -->  
-                <div id='newexpense'></div>
+                <div id='newexpense' class='chart table-responsive'></div>
                 <br>
 <!-- NEW EXPENSE BUTTON -->  
                 <button onclick="addNewExpense();" class='btn-primary' style="float: right">Add New Expense</button>
@@ -83,10 +87,10 @@
                 </div>
             </div>
 
-            <div class="col-5 mx-auto chart" id='accordion-parent'>
+            <div class="col-5 mx-auto">
                 <h4>Income Categories</h4>
 <!-- NEW INCOME DIV -->              
-                <div id='newincome'></div>
+                <div id='newincome' class='chart table-responsive'></div>
                 <br>
 <!-- NEW INCOME BUTTON -->  
                 <button onclick="addNewIncome();" class='btn-primary' style="float: right">Add New Income</button>

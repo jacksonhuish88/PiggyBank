@@ -19,7 +19,7 @@ function closeExpensePopUp(){
     // Create new accordion panel
     var panel = document.createElement("div");
     panel.classList.add("panel");
-    panel.innerHTML = "<table class='table'><thead><tr><th scope='col'>Check</th><th scope='col'>Name</th><th scope='col'>$/Month</th><th scope='col'>Address</th><th scope='col'>Notes</th><th scope='col'>Edit</th><th scope='col'>Delete</th></tr></thead></table>";
+    panel.innerHTML = "<table class='table table-responsive'><thead><tr><th scope='col'>Check</th><th scope='col'>Name</th><th scope='col'>$/Month</th><th scope='col'>Address</th><th scope='col'>Notes</th><th scope='col'>Edit</th><th scope='col'>Delete</th></tr></thead></table>";
 
     // Create new "Delete" button inside of accordion panel
     var deleteBtn = document.createElement("button");
@@ -32,6 +32,7 @@ function closeExpensePopUp(){
     // Append the new accordion, panel, and "Delete" button to the expenses div
     var div = document.createElement('div');
     div.id = 'accordion-parent';
+    div.classList.add("table-responsive");
     div.appendChild(btn);
     div.appendChild(panel);
     panel.appendChild(deleteBtn);
