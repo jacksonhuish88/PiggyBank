@@ -575,6 +575,7 @@ pre code {
   padding-right: 1rem;
   padding-top:1rem;
   padding-bottom:1rem;
+  background-color: #007bff;
 }
 
 .no-gutters {
@@ -10640,7 +10641,7 @@ div.panel.show{
 
 .chart{
   padding:1rem;
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 8px;
   border:solid black;
 }
 
@@ -10652,4 +10653,33 @@ div.panel.show{
   .large-element {
     overflow-x: scroll;
   }
+}
+
+.sidenav{
+  position:fixed;
+  top:0;
+  bottom:0;
+  width:150px;
+  background-color:#003603a8;
+}
+
+.topbar{
+  margin-left:138px;
+  padding-bottom:0rem;
+  padding-top:2rem;
+  background-color:#003603a8;
+}
+
+.sidemenu {
+  position: fixed;
+  top: 100px;
+}
+
+.sidemenu div, link{
+  padding: 12px 16px;
+  font-size: 22px
+}
+
+.sidemenu div:hover, link:hover{
+  color:white;
 }

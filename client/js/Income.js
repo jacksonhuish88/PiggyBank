@@ -50,6 +50,17 @@ function closeIncomePopUp(){
         this.classList.toggle("active");
         this.nextElementSibling.classList.toggle("show");
     });
+
+    // Create Variable for the Income Summary
+    let summary = document.getElementById('incomesummary')
+    let new_row = document.createElement('tr')
+    
+    // New Row Data and Attributes
+    new_row.innerHTML = '<td>' + new_income_category + '</td>'
+    new_row.id = new_income_category + '_row'
+
+    // Add New Row to Summary Table
+    summary.appendChild(new_row)
 };
 
 function deleteIncomeElement(element) {
