@@ -2439,6 +2439,8 @@ fieldset:disabled a.btn {
   border-color: black;
   border-radius: 6px;
   padding:0.25rem;
+  display: block;
+  margin: auto;
 }
 .btn-primary:hover {
   color: white;
@@ -10528,8 +10530,8 @@ button.accordion{
   outline:none;
   width:100%;
   text-align:left;
-  background-color:lightsalmon;
-  color:black;
+  background-color:#900c00;
+  color:white;
   padding:8px;
   margin:4px 0;
   border-radius:4px;
@@ -10537,12 +10539,14 @@ button.accordion{
 }
 
 button.accordion:hover{
-  background-color:gray;
+  background-color:lightsalmon;
+  cursor: pointer;
+  color:black;
 }
 
 button.accordion.active{
-  background-color:lightsalmon;
-  color:#000;
+  background-color:#900c00;
+  color:white;
   border-radius:4px 4px 0 0;
   margin:4px 0 0;
  }

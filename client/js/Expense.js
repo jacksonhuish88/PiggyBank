@@ -36,7 +36,7 @@ function closeExpensePopUp(){
     div.appendChild(btn);
     div.appendChild(panel);
     panel.appendChild(deleteBtn);
-    expenses.appendChild(div);
+    expenses.prepend(div);
 
     // Accordion Button Info
     btn.id = new_expense_category + '_accordion'

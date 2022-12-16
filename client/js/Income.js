@@ -36,11 +36,12 @@ function closeIncomePopUp(){
     div.appendChild(btn);
     div.appendChild(panel);
     panel.appendChild(deleteBtn);
-    income.appendChild(div);
+    income.prepend(div);
 
     // Accordion Button Info
     btn.id = new_income_category + '_accordion'
-    btn.style.backgroundColor = 'lightgreen'
+    btn.style.backgroundColor = '#005a00';
+    btn.style.color = 'white';
     btn.classList.add("accordion");
     btn.innerHTML = new_income_category;
 

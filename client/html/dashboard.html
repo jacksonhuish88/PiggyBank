@@ -13,7 +13,7 @@
 <body>
     <!-- Projects-->
     <nav>
-        <div class="contatiner-flex">
+        <div class="contatiner-flex" style="background-color:#005a00;color:white">
             <div class='row'>
                 <h4>Nav</h4>
             </div>
@@ -67,11 +67,12 @@
             <div class="col-5 mx-auto">
                 <h4>Expense Categories</h4>
                 <!-- CLOSE APPEND NEW EXPENSES -->  
-                <div id='newexpense' class='chart table-responsive'></div>
+                <div id='newexpense' class='chart table-responsive'>  
+<!-- NEW EXPENSE BUTTON -->
+                    <button onclick="addNewExpense();" class='btn-primary'>Add New Expense</button>
+                </div>
                 <br>
-<!-- NEW EXPENSE BUTTON -->  
-                <button onclick="addNewExpense();" class='btn-primary' style="float: right">Add New Expense</button>
-<!-- NEW EXPENSE FORM -->              
+<!-- NEW EXPENSE POPUP FORM -->              
                 <div class='popup' id='expensepopup'>
                     <!-- Create the exit box element -->
                     <div class="exitpopup">
@@ -90,11 +91,12 @@
             <div class="col-5 mx-auto">
                 <h4>Income Categories</h4>
 <!-- NEW INCOME DIV -->              
-                <div id='newincome' class='chart table-responsive'></div>
-                <br>
+                <div id='newincome' class='chart table-responsive'>
 <!-- NEW INCOME BUTTON -->  
-                <button onclick="addNewIncome();" class='btn-primary' style="float: right">Add New Income</button>
-<!-- NEW INCOME INFO-->
+                    <button onclick="addNewIncome();" class='btn-primary'>Add New Income</button>
+                </div>
+                <br>
+<!-- NEW INCOME  POPUP INFO-->
                 <div class='popup' id='incomepopup'>
                     <div class="exitpopup"> <!-- EXIT BUTTON -->
                         <button type='button' onclick='cancelIncomePopUp()'>X</button>
