@@ -575,7 +575,6 @@ pre code {
   padding-right: 1rem;
   padding-top:1rem;
   padding-bottom:1rem;
-  background-color: #007bff;
 }
 
 .no-gutters {
@@ -3971,12 +3970,14 @@ input[type=button].btn-block {
 }
 .navbar-brand {
   display: inline-block;
-  padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
+  top:0;
+  width:100%;
+
 }
 .navbar-brand:hover, .navbar-brand:focus {
   text-decoration: none;
@@ -10659,14 +10660,7 @@ div.panel.show{
   position:fixed;
   top:0;
   bottom:0;
-  width:150px;
-  background-color:#003603a8;
-}
-
-.topbar{
-  margin-left:138px;
-  padding-bottom:0rem;
-  padding-top:2rem;
+  width:190px;
   background-color:#003603a8;
 }
 
@@ -10675,11 +10669,42 @@ div.panel.show{
   top: 100px;
 }
 
+.sidemenu h1, h2, h3, h4, h5, h6{
+  padding-left: 12.5px;
+  padding-top: 0px;
+}
+
 .sidemenu div, link{
-  padding: 12px 16px;
-  font-size: 22px
+  padding: 10px 25px;
+  font-size: 22px;
+  border-top: solid black;
 }
 
 .sidemenu div:hover, link:hover{
+  color:white;
+}
+
+.topbar{
+  margin-left:178px;
+  padding-bottom:1rem;
+  padding-top:3.5rem;
+  background-color:#003603a8;
+  border-bottom: solid black;
+}
+
+.topmenu {
+  padding-top:3rem;
+  float:right;
+  top:0;
+  right:0;
+  position:fixed;
+}
+
+.topmenu div, link{
+  display:inline-block;
+  padding-right:2rem;
+}
+
+.topmenu div:hover, link:hover{
   color:white;
 }
