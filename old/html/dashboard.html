@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/styles.css" rel="stylesheet" />
+    <script src="../js/index.js"></script>
+    <script src="../js/Expense.js"></script>
+    <script src="../js/Income.js"></script>
+    <title>Dashboard</title>
+</head>
+<body>
+<!-- Nav horizontal -->
+    <nav>
+        <div class="contatiner-flex">
+            <div class='row topbar'>
+                <div class="topmenu">
+                    <div>Profile</div>
+                    <div>Logout</div>
+                </div>
+            </div>
+        </div>
+        <div class="contatiner-flex">
+            <div class='row sidenav'>
+                <h4 style="font-size:45px">FINTRACK</h4>
+                <div class='sidemenu'>
+                    <div>Dashboard</div>
+                    <div>Menu Item 2</div>
+                    <div>Menu Item 3</div>
+                    <div style="border-bottom:solid black">Plan a Trip</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <br>
+
+    <div class="container-flex">
+        <div class="row" style="margin-left:138px">
+<!-- EXECUTIVE SUMMARY -->
+            <div class="col-8 mx-auto">
+                <h4>EXECUTIVE SUMMARY</h4>
+                <div class="chart table-responsive">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Income</th>
+                            <th scope="col">Job Title</th>
+                            <th scope="col">$IncomeTot/Month</th>
+                            <th scope="col">$ExpenseTot/Month</th>
+                            <th scope="col">$Savings/$Debt/Month</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <br>
+            
+        <div class="row" style="margin-left:138px">
+<!-- EXPENSE SUMMARY -->
+            <div class="col-4 mx-auto">
+                <h4>EXPENSE SUMMARY</h4>
+                <div class="chart table-responsive">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Expense Name</th>
+                            <th scope="col">$/Wk</th>
+                            <th scope="col">$/Month</th>
+                        </tr>
+                        </thead>
+                        <tbody id='expensesummary'>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+<!-- INCOME SUMMARY -->
+            <div class="col-4 mx-auto">
+                <h4>INCOME SUMMARY</h4>
+                <div class="chart table-responsive">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Income Name</th>
+                            <th scope="col">$/Wk</th>
+                            <th scope="col">$/Month</th>
+                        </tr>
+                        </thead>
+                        <tbody id='incomesummary'>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+<!-- ACCORDION SECTION -->
+    <div class="container-flex">
+        <div class="row" style="margin-left:138px">
+            <div class="col-5 mx-auto">
+                <h4>Expense Categories</h4>
+                <!-- CLOSE APPEND NEW EXPENSES -->  
+                <div id='newexpense' class='chart table-responsive'>  
+<!-- NEW EXPENSE BUTTON -->
+                    <button onclick="addNewExpense();" class='btn-primary'>Add New Expense</button>
+                </div>
+                <br>
+<!-- NEW EXPENSE POPUP FORM -->              
+                <div class='popup' id='expensepopup'>
+                    <!-- Create the exit box element -->
+                    <div class="exitpopup">
+                        <button type='button' onclick='cancelExpensePopUp()'>X</button>
+                    </div>
+                    <h2>New Expense Category</h2>
+                    <br>
+                    <form action="submit"> <!-- NEW EXPENSE CATEGORY FORM -->
+                        <label for="expensecategory">Expense Category:</label>
+                        <input type="text" id='expensecategory' name='expensecategory'>
+                        <button type='button' onclick='closeExpensePopUp()'>Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-5 mx-auto">
+                <h4>Income Categories</h4>
+<!-- NEW INCOME DIV -->              
+                <div id='newincome' class='chart table-responsive'>
+<!-- NEW INCOME BUTTON -->  
+                    <button onclick="addNewIncome();" class='btn-primary'>Add New Income</button>
+                </div>
+                <br>
+<!-- NEW INCOME  POPUP INFO-->
+                <div class='popup' id='incomepopup'>
+                    <div class="exitpopup"> <!-- EXIT BUTTON -->
+                        <button type='button' onclick='cancelIncomePopUp()'>X</button>
+                    </div>
+                    <h2>New Income Category</h2>
+                    <br>
+                    <form action='submit'> <!-- NEW INCOME CATEGORY FORM -->
+                        <label for="incomecategory">Income Name:</label>
+                        <input type="text" id='incomecategory' name='incomecategory'>
+                        <br>
+                        <button type='button' onclick='closeIncomePopUp()'>Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+
+
+    <script>
+    // Select the parent element that contains all of the accordion buttons
+    var accordionParent = document.getElementsById('accordion-parent');
+
+    // Attach the event listener to the parent element
+    accordionParent.addEventListener("click", function(event) {
+    
+        // Check if the clicked element is an accordion button
+        if (event.target.childElement.contains("accordion")) {
+            // If it is, toggle the "active" and "show" classes on the clicked element and its corresponding panel
+            event.target.classList.toggle("active");
+            event.target.nextElementSibling.classList.toggle("show");
+        }
+        });
+    </script>
+</body>
+</html>
