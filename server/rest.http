@@ -23,7 +23,7 @@ POST http://localhost:5500/income
 Content-Type: application/json
 
 {
-    "title": "Test 1",
+    "title": "Test 2",
     "rate": 22.00,
     "weekly_hours": 34,
     "notes": "not much to add here"

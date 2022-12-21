@@ -1,6 +1,10 @@
-const Layout = () => {
+import AdminNav from "./AdminNav";
+const Layout = ({children}) => {
     return (
-        <h1>Test</h1>
+        <div>
+            <AdminNav />
+            {children}
+        </div>
     )
 }
 

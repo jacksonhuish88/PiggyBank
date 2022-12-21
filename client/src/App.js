@@ -1,12 +1,11 @@
 import './App.css';
+import Layout from './components/Layout/Layout';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-          <h1>FINTRACK</h1>
-      </header>
-    </div>
+    <Layout>
+      <h1>FinTrack</h1>
+    </Layout>
   );
 }
 
