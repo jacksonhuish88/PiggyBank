@@ -1,0 +1,60 @@
+@charset "UTF-8"; 
+
+.sidenav{
+    position:fixed;
+    top:0;
+    bottom:0;
+    width:200px;
+    background-color:#003603a8;
+  }
+  
+  .sidemenu {
+    position: fixed;
+    top: 100px;   
+    width:200px;
+  }
+  
+  .sidemenu h1, h2, h3, h4, h5, h6{
+    padding-top: 0px;
+  }
+  
+  .sidemenu div, link{
+    padding: 10px 25px;
+    font-size: 22px;
+    border-top: solid black;
+    text-align: center;
+    width: 155px;
+
+  }
+  
+  .sidemenu div:hover, link:hover{
+    color:white;
+  }
+  
+  .topbar{
+    margin-left:188px;
+    padding-bottom:1rem;
+    padding-top:3.5rem;
+    background-color:#003603a8;
+    border-bottom: solid black;
+    text-align:right;
+    
+  }
+  
+  .topmenu {
+    padding-top:3rem;
+    float:right;
+    top:0;
+    right:0;
+    position:fixed;
+  }
+  
+  .topmenu div, link{
+    display:inline-block;
+    padding-right:2rem;
+    text-align:right;
+  }
+  
+  .topmenu div:hover, link:hover{
+    color:white;
+  }

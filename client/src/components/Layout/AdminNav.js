@@ -1,3 +1,5 @@
+import './AdminNav.css';
+
 const AdminNav = () => {
     return (
         <div>
@@ -21,7 +23,7 @@ const AdminNav = () => {
                 </div>
         </nav>
         <div className="container-flex py-2" style={{padding: "15rem"}}>
-                    <h1>This is where the content will go</h1>
+            <h1>This is where the content will go</h1>
         </div>
         </div>
     )
