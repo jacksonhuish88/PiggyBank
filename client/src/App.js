@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <Layout>
-        <h1>This is where content will go</h1>
+        <h1>This is where content GRAPHS will go</h1>
       </Layout>
     </>
   );
