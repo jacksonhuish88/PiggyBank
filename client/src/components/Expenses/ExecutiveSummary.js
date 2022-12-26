@@ -1,4 +1,3 @@
-import './ExecutiveSummary.css';
 import '../../App.css';
 
 const ExecutiveSummary = () => {

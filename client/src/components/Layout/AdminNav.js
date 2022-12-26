@@ -1,8 +1,10 @@
 import './AdminNav.css';
+import '../../App.css';
 import ExecutiveSummary from '../Expenses/ExecutiveSummary';
 import ExpenseSummary from '../Expenses/ExpenseSummary';
+import ExpenseAccordion from '../Expenses/ExpenseAccordions/ExpenseAccordions';
+import IncomeAccordion from '../Incomes/IncomeAccordions/IncomeAccordions';
 import IncomeSummary from '../Incomes/IncomeSummary';
-
 
 const AdminNav = () => {
     return (
@@ -27,7 +29,6 @@ const AdminNav = () => {
                 </div>
             </nav>
             <div className="container-flex py-2" style={{padding: "15rem"}}>
-                <h1>This is where the content will go</h1>
                 <ExecutiveSummary />
                 <div className='row'>
                     <div className='col 6'>
@@ -35,6 +36,14 @@ const AdminNav = () => {
                     </div>
                     <div className='col 6'>
                         <IncomeSummary />
+                    </div>
+                </div>
+                <div className='row'>
+                    <div className='col 6'>
+                        <ExpenseAccordion />
+                    </div>
+                    <div className='col 6'>
+                        <IncomeAccordion />
                     </div>
                 </div>
             </div>

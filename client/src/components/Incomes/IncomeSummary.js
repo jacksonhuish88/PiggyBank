@@ -1,4 +1,3 @@
-import './IncomeSummary.css';
 import '../../App.css';
 
 const IncomeSummary = () => {

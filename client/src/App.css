@@ -10708,3 +10708,22 @@ div.panel.show{
 .topmenu div:hover, link:hover{
   color:white;
 }
+
+.popup-form{
+  border:solid black;
+  background-color:lightgrey;
+  text-align:center;
+  padding-top: .5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.popup-form button{
+  margin-top:0.5rem;
+  background-color:var(--blue);
+  color:white;
+}
+
+.popup-form button:hover{
+  background-color:lightblue;
+}
