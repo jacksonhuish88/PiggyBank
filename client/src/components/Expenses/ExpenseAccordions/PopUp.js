@@ -1,13 +1,33 @@
 import React, { useState } from 'react';
 import '../../../App.css';
 import '../ExpenseAccordions/ExpenseAccordions.css';
+import Accordion from '../ExpenseAccordions/Accordion';
 
 function CategoryPopUp() {
   const [showForm, setShowForm] = useState(false);
+  const [expenseCategories, setExpenseCategories] = useState([]);
+  const [newCategoryName, setNewCategoryName] = useState('');
 
   const toggleForm = () => {
     setShowForm(prevShowForm => !prevShowForm);
-  }
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setExpenseCategories([...expenseCategories, newCategoryName]);
+    setNewCategoryName('');
+    toggleForm();
+  };
+
+  const handleCategoryNameChange = (event) => {
+    setNewCategoryName(event.target.value);
+  };
+
+  const handleDelete = (index) => {
+    setExpenseCategories(
+      expenseCategories.filter((category, i) => i !== index)
+    );
+  };
 
   return (
     <div>
@@ -21,17 +41,28 @@ function CategoryPopUp() {
               <button type='button' onClick={toggleForm}>X</button>
             </div>
             <h3>Add Expense Category</h3>
-              <form>
-              {(<>
-                    <label for="expensecategory">Expense Name:</label>
-                    <input type="text" id='expensecategory' name='expensecategory'/>
-                    <br/>
-                    <button type='button' onclick='closeIncomePopUp()'>Submit</button>
-                </>)}
+              <form onSubmit={handleSubmit}>
+                <label for="expensecategory">Expense Name:</label>
+                <input
+                  type="text"
+                  id='expensecategory'
+                  name='expensecategory'
+                  value={newCategoryName}
+                  onChange={handleCategoryNameChange}
+                />
+                <br/>
+                <button type='submit'>Submit</button>
               </form>
           </div>
         </>
       )}
+      {expenseCategories.map((category, index) => (
+        <Accordion
+          key={index}
+          category={category}
+          handleDelete={() => handleDelete(index)}
+        />
+      ))}
     </div>
   );
 }
