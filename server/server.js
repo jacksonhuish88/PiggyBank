@@ -4,6 +4,7 @@ const PORT = 5500
 
 const dbConnect = require('./db')
 
+fastify.register(require("@fastify/cors"), {origin: '*'})
 fastify.register(dbConnect)
 fastify.register(require('./routes/expenses'))
 fastify.register(require('./routes/income'))
