@@ -9,7 +9,7 @@ function Accordion(props) {
         <div className="accordion-header">
           {category}
           <button class='deletebutton' type="button" onClick={handleDelete}>
-            Delete Category
+            Delete Piggy Bank
           </button>
         </div>
       <div className="accordion-content">

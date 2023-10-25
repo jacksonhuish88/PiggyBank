@@ -5,7 +5,7 @@
     top:0;
     bottom:0;
     width:200px;
-    background-color:#003603a8;
+    background-color:#ff71ffa8;
   }
   
   .sidemenu {
@@ -35,7 +35,8 @@
     margin-left:188px;
     padding-bottom:1rem;
     padding-top:3.5rem;
-    background-color:#003603a8;
+    width:200px;
+;
     border-bottom: solid black;
     text-align:right;
     
@@ -47,6 +48,7 @@
     top:0;
     right:0;
     position:fixed;
+    background-color:#ff71ffa8;
   }
   
   .topmenu div, link{

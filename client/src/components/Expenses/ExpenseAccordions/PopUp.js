@@ -32,7 +32,7 @@ function CategoryPopUp() {
   return (
     <div>
       <button class='btn-primary' onClick={toggleForm}>
-        Add Expense Category
+        Add Child
       </button>
       {showForm && (
         <>
@@ -40,9 +40,9 @@ function CategoryPopUp() {
             <div class="exitbutton">
               <button type='button' onClick={toggleForm}>X</button>
             </div>
-            <h3>Add Expense Category</h3>
+            <h3>Add Child</h3>
               <form onSubmit={handleSubmit}>
-                <label for="expensecategory">Expense Name:</label>
+                <label for="expensecategory">Child's Name:</label>
                 <input
                   type="text"
                   id='expensecategory'

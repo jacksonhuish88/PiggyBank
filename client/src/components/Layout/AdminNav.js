@@ -1,10 +1,6 @@
 import './AdminNav.css';
 import '../../App.css';
-import ExecutiveSummary from '../Expenses/ExecutiveSummary';
-import ExpenseSummary from '../Expenses/ExpenseSummary';
-import ExpenseAccordion from '../Expenses/ExpenseAccordions/ExpenseAccordions';
-import IncomeAccordion from '../Incomes/IncomeAccordions/IncomeAccordions';
-import IncomeSummary from '../Incomes/IncomeSummary';
+import AddChildAccordion from '../Expenses/ExpenseAccordions/AddChildAccordion';
 
 const AdminNav = () => {
     return (
@@ -19,7 +15,7 @@ const AdminNav = () => {
                 </div>
             </div>
                 <div className='row sidenav'>
-                    <h4 style={{fontSize: "45px"}}>FINTRACK</h4>
+                    <h4 style={{fontSize: "36px"}}>Piggy Bank</h4>
                     <div className='sidemenu'>
                         <div>Dashboard</div>
                         <div>Menu Item 2</div>
@@ -28,22 +24,10 @@ const AdminNav = () => {
                     </div>
                 </div>
             </nav>
-            <div className="container-flex py-2" style={{padding: "15rem"}}>
-                <ExecutiveSummary />
+            <div className="container-flex py-2" style={{padding: "15rem"}}> 
                 <div className='row'>
                     <div className='col 6'>
-                        <ExpenseSummary />
-                    </div>
-                    <div className='col 6'>
-                        <IncomeSummary />
-                    </div>
-                </div>
-                <div className='row'>
-                    <div className='col 6'>
-                        <ExpenseAccordion />
-                    </div>
-                    <div className='col 6'>
-                        <IncomeAccordion />
+                        <AddChildAccordion />
                     </div>
                 </div>
             </div>
